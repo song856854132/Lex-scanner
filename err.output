@@ -1,0 +1,131 @@
+Starting parse
+Entering state 0
+Reading a token: Next token is token PROGRAM ()
+Shifting token PROGRAM ()
+Entering state 1
+Reading a token: Next token is token ID ()
+Shifting token ID ()
+Entering state 3
+Reducing stack by rule 5 (line 43):
+   $1 = token ID ()
+-> $$ = nterm program_name ()
+Stack now 0 1
+Entering state 4
+Reading a token: Next token is token SEMICOLON ()
+Shifting token SEMICOLON ()
+Entering state 6
+Reducing stack by rule 1 (line 36):
+-> $$ = nterm $@1 ()
+Stack now 0 1 4 6
+Entering state 7
+Reading a token: Next token is token VAR ()
+Shifting token VAR ()
+Entering state 8
+Reducing stack by rule 2 (line 37):
+-> $$ = nterm $@2 ()
+Stack now 0 1 4 6 7 8
+Entering state 9
+Reading a token: Next token is token ID ()
+Shifting token ID ()
+Entering state 10
+Reading a token: Next token is token COMMA ()
+Reducing stack by rule 55 (line 110):
+   $1 = token ID ()
+-> $$ = nterm var_id ()
+Stack now 0 1 4 6 7 8 9
+Entering state 15
+Reducing stack by rule 14 (line 55):
+   $1 = nterm var_id ()
+-> $$ = nterm id_list ()
+Stack now 0 1 4 6 7 8 9
+Entering state 14
+Next token is token COMMA ()
+Shifting token COMMA ()
+Entering state 18
+Reading a token: Next token is token ID ()
+Shifting token ID ()
+Entering state 10
+Reading a token: Next token is token COLON ()
+Reducing stack by rule 55 (line 110):
+   $1 = token ID ()
+-> $$ = nterm var_id ()
+Stack now 0 1 4 6 7 8 9 14 18
+Entering state 31
+Reducing stack by rule 16 (line 57):
+   $1 = nterm id_list ()
+   $2 = token COMMA ()
+   $3 = nterm var_id ()
+-> $$ = nterm id_list ()
+Stack now 0 1 4 6 7 8 9
+Entering state 14
+Next token is token COLON ()
+Shifting token COLON ()
+Entering state 19
+Reading a token: Next token is token INTEGER ()
+Shifting token INTEGER ()
+Entering state 32
+Reducing stack by rule 12 (line 53):
+   $1 = token INTEGER ()
+-> $$ = nterm std_type ()
+Stack now 0 1 4 6 7 8 9 14 19
+Entering state 35
+Reducing stack by rule 10 (line 50):
+   $1 = nterm std_type ()
+-> $$ = nterm type ()
+Stack now 0 1 4 6 7 8 9 14 19
+Entering state 34
+Reducing stack by rule 9 (line 48):
+   $1 = nterm id_list ()
+   $2 = token COLON ()
+   $3 = nterm type ()
+-> $$ = nterm dec ()
+Stack now 0 1 4 6 7 8 9
+Entering state 13
+Reducing stack by rule 6 (line 44):
+   $1 = nterm dec ()
+-> $$ = nterm dec_list ()
+Stack now 0 1 4 6 7 8 9
+Entering state 12
+Reading a token: Next token is token SEMICOLON ()
+Shifting token SEMICOLON ()
+Entering state 17
+Reading a token: Next token is token ID ()
+Shifting token ID ()
+Entering state 10
+Reading a token: Next token is token COLON ()
+Reducing stack by rule 55 (line 110):
+   $1 = token ID ()
+-> $$ = nterm var_id ()
+Stack now 0 1 4 6 7 8 9 12 17
+Entering state 15
+Reducing stack by rule 14 (line 55):
+   $1 = nterm var_id ()
+-> $$ = nterm id_list ()
+Stack now 0 1 4 6 7 8 9 12 17
+Entering state 14
+Next token is token COLON ()
+Shifting token COLON ()
+Entering state 19
+Reading a token: Next token is token STRING ()
+line 4 : syntax error, unexpected STRING, expecting INTEGER or ARRAY Error: popping token COLON ()
+Stack now 0 1 4 6 7 8 9 12 17 14
+Error: popping nterm id_list ()
+Stack now 0 1 4 6 7 8 9 12 17
+Error: popping token SEMICOLON ()
+Stack now 0 1 4 6 7 8 9 12
+Error: popping nterm dec_list ()
+Stack now 0 1 4 6 7 8 9
+Error: popping nterm $@2 ()
+Stack now 0 1 4 6 7 8
+Error: popping token VAR ()
+Stack now 0 1 4 6 7
+Error: popping nterm $@1 ()
+Stack now 0 1 4 6
+Error: popping token SEMICOLON ()
+Stack now 0 1 4
+Error: popping nterm program_name ()
+Stack now 0 1
+Error: popping token PROGRAM ()
+Stack now 0
+Cleanup: discarding lookahead token STRING ()
+Stack now 0
